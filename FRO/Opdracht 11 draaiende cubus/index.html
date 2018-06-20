@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content=2>
+
+    <title>House of the rising sun</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1200" height="1200"></canvas>
+    <script>
+//<link rel="stylesheet" href="myStyle.css">
+
+//---Draw a Line---
+    function draw_line(x1,y1,x2,y2)//draw_line(,,,);
+    {
+      let c = document.getElementById("myCanvas");
+      let ctx = c.getContext("2d");
+      ctx.moveTo(x1,y1);
+      ctx.lineTo(x2,y2);
+      ctx.lineWidth=5;
+      //ctx.strokeStyle"rgba(255,0,0,)"
+      ctx.stroke();
+    }
+
+    function draw_line_ver(x1,y1,len)//draw_line(,,,);
+    {
+      let c = document.getElementById("myCanvas");
+      let ctxv = c.getContext("2d");
+
+      ctxv.moveTo(x1,y1);
+      ctxv.lineTo(x1,y1+len);
+      ctxv.lineWidth=5;
+      //ctx.strokeStyle"rgba(255,0,0,)"
+      ctxv.stroke();
+    }
+
+    function draw_line_hor(x1,y1,x2,y2)//draw_line(,,,);
+    {
+      let c = document.getElementById("myCanvas");
+      let ctxh = c.getContext("2d");
+      ctxh.moveTo(x1,y1);
+      ctxh.lineTo(x2,y2);
+      ctxh.lineWidth=5;
+      //ctx.strokeStyle"rgba(255,0,0,)"
+      ctxh.stroke();
+    }
+    //Draw Lines of the house
+    let rr=90;
+
+    function lengthdir_x(len,dir)
+    {
+      output=
+    }
+    let xx=
+      draw_line_ver(600+xx,400+yy,-200);
+
+
+
+    //draw_line_ver(800,500,-200,rr);
+
+    //draw_line_ver(600,600,-200,rr);
+
+    //draw_line_ver(400,500,-200,rr);
+
+
+
+
+
+    </script>
+
+    <script>
+</script>
+
+
+  </body>
+</html>

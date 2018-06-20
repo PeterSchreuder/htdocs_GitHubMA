@@ -1,0 +1,35 @@
+@font-face {
+    font-family: Font;
+    src: url(fonts/BEBAS.ttf);
+}
+
+* {
+    padding: 1rem;
+}
+
+
+body {
+    font-family: Font;
+    display: grid;
+    text-align: center;
+    grid-column: auto;
+    background-color: black;
+    color: white;
+}
+
+#myAssignment {
+    font-size: 75px;
+}
+
+#head {
+    font-size: 75px;
+}
+
+
+#Healthy {
+     color: chartreuse;
+ }
+
+#Unhealthy {
+    color: red;
+}

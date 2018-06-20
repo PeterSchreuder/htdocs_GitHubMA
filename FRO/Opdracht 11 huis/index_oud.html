@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content=2>
+    <title>House of the rising sun</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+    <script>
+      let c = document.getElementById("myCanvas");
+      let ctx = c.getContext("2d");
+      ctx.moveTo(100,87);
+      ctx.lineTo(100,300);
+      ctx.lineWidth=5;
+      ctx.stroke();
+
+      let ctx1 = c.getContext("2d");
+      ctx1.moveTo(180,87);
+      ctx1.lineTo(180,300);
+      ctx1.lineWidth=5;
+      ctx1.stroke();
+    </script>
+
+    <script>
+//let c = document.getElementById("myCanvas");
+/*let ctx2 = c.getContext("2d");
+ctx2.lineWidth=5;
+ctx2.strokeStyle="#000000";
+ctx2.strokeRect(20, 20, 80, 100);*/
+</script>
+
+<script>
+//c = document.getElementById("myCanvas");
+let ctx3 = c.getContext("2d");
+ctx3.beginPath();
+ctx3.arc(95,50,40,0,2*Math.PI);
+ctx3.stroke();
+
+let ctx4 = c.getContext("2d");
+ctx4.beginPath();
+ctx4.arc(190,50,40,0,2*Math.PI);
+ctx4.stroke();
+
+let ctx5 = c.getContext("2d");
+ctx5.beginPath();
+ctx5.arc(140,300,40,0,2*Math.PI);
+ctx5.stroke();
+
+
+</script>
+
+
+
+  </body>
+</html>

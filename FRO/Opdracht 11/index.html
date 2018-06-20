@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="styleSheet" href="myStyle.css">
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content=2000>
+    <title>House of the rising sun</title>
+
+  </head>
+  <body>
+
+    <canvas id="myCanvas" width="1200" height="1200"></canvas>
+    <script>
+
+
+    function draw_line(x1,y1,x2,y2)//draw_line(,,,);
+    {
+      let c = document.getElementById("myCanvas");
+      let ctx = c.getContext("2d");
+      ctx.moveTo(x1,y1);
+      ctx.lineTo(x2,y2);
+      ctx.lineWidth=5;
+      //ctx.strokeStyle"rgba(255,0,0,)"
+      ctx.stroke();
+    }
+
+    function draw_line_ver(x1,y1,len)//draw_line(,,,);
+    {
+      let c = document.getElementById("myCanvas");
+      let ctxv = c.getContext("2d");
+      ctxv.moveTo(x1,y1);
+      ctxv.lineTo(x1,y1+len);
+      ctxv.lineWidth=5;
+      //ctx.strokeStyle"rgba(255,0,0,)"
+      ctxv.stroke();
+    }
+
+    function draw_line_hor(x1,y1,x2,y2)//draw_line(,,,);
+    {
+      let c = document.getElementById("myCanvas");
+      let ctxh = c.getContext("2d");
+      ctxh.moveTo(x1,y1);
+      ctxh.lineTo(x2,y2);
+      ctxh.lineWidth=5;
+      //ctx.strokeStyle"rgba(255,0,0,)"
+      ctxh.stroke();
+    }
+
+
+    //Draw Lines of the house
+    //Dak
+    draw_line(300,100,700,200);
+    draw_line(300,100,200,300);
+    draw_line(700,200,600,400);
+    draw_line(200,300,600,400);
+    draw_line(700,200,800,300);
+    draw_line(600,400,800,300);
+    //Muren
+    draw_line(200,300,200,500);
+    draw_line(200,500,600,600);
+    draw_line(600,600,600,400);
+    draw_line(600,600,800,500);
+    draw_line(800,500,800,300);
+
+    draw_line_ver(800-50,500+25,-125);//verticaal
+     draw_line(600+50,500-50,800-50,500-100);//horizontaal
+
+    draw_line_ver(600+50,600-25,-125);
+
+
+
+
+
+    </script>
+
+    <script>
+//let c = document.getElementById("myCanvas");
+/*let ctx2 = c.getContext("2d");
+ctx2.lineWidth=5;
+ctx2.strokeStyle="#000000";
+ctx2.strokeRect(20, 20, 80, 100);*/
+</script>
+
+<script>
+//c = document.getElementById("myCanvas");
+function draw_circle(xx,yy)
+{
+let ctx3 = c.getContext("2d");
+ctx3.beginPath();
+ctx3.arc(xx,yy,40,0,2*Math.PI);
+ctx3.stroke();
+}
+
+draw_circle(100,50)
+
+
+
+</script>
+
+
+
+  </body>
+</html>

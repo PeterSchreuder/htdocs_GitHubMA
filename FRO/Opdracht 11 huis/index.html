@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="refresh" content=6>-->
+    <link rel="stylesheet" href="myStyle.css">
+    <title>House of the rising sun</title>
+  </head>
+  <body>
+    <div id = "mousePos">
+    </div>
+    </div>
+    <canvas id="myCanvas" width="1200" height="1200"></canvas>
+    <script>
+    function draw_line(x1,y1,x2,y2)//draw_line(,,,);
+    {
+      let c = document.getElementById("myCanvas");
+      let ctx = c.getContext("2d");
+      ctx.moveTo(x1,y1);
+      ctx.lineTo(x2,y2);
+      ctx.lineWidth=5;
+      //ctx.strokeStyle"rgba(255,0,0,)"
+      ctx.stroke();
+    }
+
+    function draw_line_ver(x1,y1,len)//draw_line(,,,);
+    {
+      let c = document.getElementById("myCanvas");
+      let ctxv = c.getContext("2d");
+      ctxv.moveTo(x1,y1);
+      ctxv.lineTo(x1,y1+len);
+      ctxv.lineWidth=5;
+      //ctx.strokeStyle"rgba(255,0,0,)"
+      ctxv.stroke();
+    }
+
+    function printMousePos(event)
+    {
+      document.getElementById('mousePos').innerHTML = "clientX: " + ((event.clientX-8)/20) +" - clientY: " + ((event.clientY-26)/20);
+    }
+    document.addEventListener("mousemove", printMousePos);
+
+
+    function draw_circle(x1,y1,rad,colorFill,colorStroke,stroke_thicc)
+    {
+      let c = document.getElementById("myCanvas");
+      let ctxcir = c.getContext("2d");
+      ctxcir.beginPath();
+      ctxcir.arc(x1*20,y1*20,rad*20,3.14,(Math.PI*2));
+      ctxcir.lineWidth=stroke_thicc;
+      ctxcir.strokeStyle=colorStroke;
+      ctxcir.fillStyle=colorFill;
+      ctxcir.stroke();
+    }
+  //deze function hou ik van
+    function draw_rectangle(begin_x,begin_y, rechts_top_x,rechts_top_y, links_bottom_x,links_bottom_y, rechts_bottom_x,rechts_bottom_y,colorFill,colorStroke,stroke_thicc)
+    {
+      let c = document.getElementById("myCanvas");
+      let ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.moveTo(begin_x*20,begin_y*20);//BEGIN
+      ctx.lineTo(rechts_top_x*20,rechts_top_y*20);//RECHTS TOP
+      ctx.lineTo(rechts_bottom_x*20,rechts_bottom_y*20);//RECHTS BOTTOM
+      ctx.lineTo(links_bottom_x*20,links_bottom_y*20);//LINKS BOTTOM
+      ctx.lineTo(begin_x*20,begin_y*20);//EIND PUNT
+      ctx.lineWidth=stroke_thicc;
+      ctx.strokeStyle=colorStroke;
+      ctx.fillStyle=colorFill;
+      ctx.fill();
+      ctx.stroke();
+    }
+
+    //Draw Lines of the house
+    // draw_circle(27.5,5,2.5,"rgba(255,128,0,1)","rgba(0,0,0,1)",2);
+    // draw_rectangle(25,5,30,5,25,10,30,10,"rgba(255,128,0,1)","rgba(0,0,0,1)",5);
+    //Gebouw
+    //draw_rectangle(,,,,,,,,"rgba(255,128,0,1)","rgba(0,0,0,1)",5);
+    draw_rectangle(25,6,28,6.8,25,10,28,15,"rgba(255,128,0,1)","rgba(0,0,0,1)",5);
+    draw_rectangle(25,6,28,6.8,27.8,5.5,30.4,6.1,"rgba(255,128,0,1)","rgba(0,0,0,1)",5);
+    draw_rectangle(28,6.8,30,6.2,28,10,30,10,"rgba(255,128,0,1)","rgba(0,0,0,1)",5);
+
+
+    draw_rectangle(15,5,35,10,10,15,30,20,"rgba(255,128,0,1)","rgba(0,0,0,1)",5);
+    draw_rectangle(10,15,30,20,10,25,30,30,"rgba(255,128,0,1)","rgba(0,0,0,1)",5);
+    draw_rectangle(30,20,40,15,30,30,40,25,"rgba(255,128,0,1)","rgba(0,0,0,1)",5);
+    draw_rectangle(35,10,40,15,35,10,30,20,"rgba(255,128,0,1)","rgba(0,0,0,1)",5);
+
+    //Shit
+    draw_rectangle(33,22,37,20,33,28.5,37,26.5,"rgba(255,128,0,1)","rgba(0,0,0,1)",5);
+    draw_rectangle(19,11,25,12,19,15.5,25,17,"rgba(255,0,0,1)","rgba(0,0,0,1)",5);
+
+
+    // draw_line(300,100,200,300);
+    // draw_line(700,200,600,400);
+    // draw_line(200,300,600,400);
+    // draw_line(700,200,800,300);
+    // draw_line(600,400,800,300);
+    // //Muren
+    // draw_line(200,300,200,500);
+    // draw_line(200,500,600,600);
+    // draw_line(600,600,600,400);
+    // draw_line(600,600,800,500);
+    // draw_line(800,500,800,300);
+    //
+    // draw_line_ver(800-60,500+30,-125);//verticaal
+    //  draw_line(600+60,500-55,800-60,500-95);//horizontaal
+    //
+    // draw_line_ver(600+60,600-30,-125);
+
+
+
+
+
+    </script>
+  </body>
+</html>

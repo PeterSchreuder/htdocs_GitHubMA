@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test Array</title>
+  </head>
+  <body>
+    <h1 id="showThis">hier komt tekst</h1>
+      <h1 id="showThis2">hier komt tekst</h1>
+    <script>
+    let showThis = document.getElementById('showThis');//bind to HTML
+    let showThis2 = document.getElementById('showThis2');//bind to HTML
+    let mijnArray=[11,12,13, 'qwerty'];
+    let text="";
+    for (let i = 0; i < mijnArray.length; i++){
+      text +="index "+i+" value "+mijnArray[i]+"<br>";
+    }
+    showThis.innerHTML=text;
+
+mijnArray[10]="lege plaatsen";
+mijnArray.push("nieuw");
+mijnArray[4] = mijnArray[1] + mijnArray[1];
+text="";
+for (let i = 0; i < mijnArray.length; i++){
+  text +="index "+i+" value "+mijnArray[i]+"<br>";
+}
+showThis2.innerHTML=text;
+    </script>
+
+  </body>
+</html>

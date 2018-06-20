@@ -1,0 +1,24 @@
+@font-face{
+  font-family: Harry;
+  src: url("fonts/FONT.otf");
+}
+
+
+body
+{
+  background-color: blue;
+}
+
+#wrapper
+{
+  background-color: yellow;
+  font-size: 400px;
+  font-family: Harry;
+}
+
+.letter
+{
+  margin: 2px;
+  background-color: purple;
+  padding: 20px;
+}

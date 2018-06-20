@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test Array</title>
+  </head>
+  <body>
+    <h1 id="showThis"></h1>
+    <script>
+    let showThis = document.getElementById('showThis');
+    let mijnArray=[10];
+    mijnArray.push(11);
+    mijnArray.push(12);
+    showThis.innerHTML=mijnArray;
+    mijnArray[1]=parseInt(prompt("Oude Waarde "+mijnArray[1]+" geef een nieuwe waarde"));
+    showThis.innerHTML=mijnArray;
+    mijnArray[2]=mijnArray[0]+mijnArray[1];
+    showThis.innerHTML=mijnArray;
+    </script>
+
+  </body>
+</html>

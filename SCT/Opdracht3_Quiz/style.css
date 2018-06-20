@@ -1,0 +1,86 @@
+@font-face {
+    font-family: Font;
+    src: url("fonts/BEBAS.ttf");
+}
+
+@keyframes myAnimation {
+    from {background-color: blue;}
+    to {background-color: darkred;}
+
+    from {left: 0px;}
+    to {left: 1000px;}
+}
+
+* {
+    padding: 1rem;
+}
+
+
+body{
+    font-family: "Arial Black";
+    display: grid;
+    text-align: center;
+    grid-column: auto;
+    background-color: black;
+    color: white;
+}
+
+.wrapper{
+    background-color: white;
+    width: 1000px;
+    height: 600px;
+    margin: 50px auto;
+}
+
+.questionBox{
+    height: 500px;
+    background-color: yellow;
+    color: black;
+}
+
+.myQuestion{
+    background-color: orange;
+}
+
+.answerBox{
+    font-family: Font;
+    font-size: 35px;
+    background-color: aliceblue;
+}
+
+.resultBox{
+    color: white;
+    background-color: rebeccapurple;
+}
+
+li{
+    list-style-type: none;
+    border: 2px blue solid;
+    background-color: blue;
+    color: white;
+    margin: 5px;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+
+
+li:hover{
+    background-color: green;
+}
+
+.correct{
+    background-color: green;
+    color: lime;
+}
+.wrong{
+    position: relative;
+    animation-name: myAnimation;
+    animation-duration: 2s;
+    background-color: darkred;
+    color: red;
+}

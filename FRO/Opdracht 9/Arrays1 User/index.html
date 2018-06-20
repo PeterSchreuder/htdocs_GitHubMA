@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test Array</title>
+  </head>
+  <body>
+    <script>
+    let showThis = document.getElementById('showThis');
+    let mijnArray=[11,12,13];
+    let text="";
+    for (let i = 0; i < mijnArray.length; i++){
+      text +="index "+i+" value "+mijnArray[i]+"<br>";
+    }
+    showThis.innerHTML=text;
+    </script>
+    <form>
+      First name:<br>
+      <input type="text" name="firstname"><br>
+      Last name:<br>
+      <input type="text" name="lastname">
+    </form>
+
+
+    <h1 id="showThis"></h1>
+    <script>
+    let showThis = document.getElementById('showThis');
+    let mijnArray=[11,12,13];
+    let text="";
+    for (let i = 0; i < mijnArray.length; i++){
+      text +="index "+i+" value "+mijnArray[i]+"<br>";
+    }
+    showThis.innerHTML=text;
+    </script>
+
+  </body>
+</html>

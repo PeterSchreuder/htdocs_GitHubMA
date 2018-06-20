@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="main">
+<div id="wrapper">
+    <div id="head">BMI&nbsp;&nbsp;&nbsp;Calculator</div>
+
+    <h1>Uw&nbsp;&nbsp;&nbsp;gewicht.</h1>
+    <input type="text" id="gewicht">
+
+    <h1>Uw&nbsp;&nbsp;&nbsp;lengte&nbsp;&nbsp;&nbsp;(In&nbsp;&nbsp;&nbsp;CM).</h1>
+    <input type="text" id="lengte">
+
+    <div id="Button">
+    <button onclick="myfunction()" value="bereken je bmi">Bereken nu</button>
+    <h1 id="resultaat"></h1>
+    </div>
+</div>
+</section>
+
+
+<script>
+
+const gewicht1 = document.getElementById("gewicht");
+const lengte1 = document.getElementById("lengte");
+
+function myfunction ()
+{
+    let gewicht = gewicht1.value;
+    let lengte = lengte1.value;
+
+    if (window.XMLHttpRequest)
+    {
+        xmlhttp = new XMLHttpRequest();
+    }
+    else
+    {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    let controlScript = "BMI.php";
+    let httpString = controlScript + "?gewicht=" + gewicht + "&lengte=" + lengte;
+    let httpResponse = "";
+    xmlhttp.open("GET", httpString, true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function ()
+    {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+        {
+            httpResponse = xmlhttp.responseText;
+            if ()
+            {
+                document.getElementById("resultaat").style.color = "chartreuse";
+            }
+            document.getElementById('resultaat').innerHTML = httpResponse;
+        }
+
+    }
+}
+
+
+</script>
+</body>
+</html>

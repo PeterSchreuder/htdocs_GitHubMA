@@ -1,0 +1,14 @@
+body
+{
+  text-align: center;
+}
+
+.Goed
+{
+  background-color: chartreuse;
+}
+
+.Fout
+{
+  background-color: red;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="bestemming" method="post">
+        <br />
+        Textveld:
+        <input name="text" type="text" size="40"/>
+        <br />
+        <br />
+        Aankruisvakjes:
+        <input name="aankruis" type="checkbox" checked="" value="k1"
+        />
+        keuze 1
+        <input name="aankruis" type="checkbox" value="k2" />
+        keuze 2
+        <br />
+        <br />
+        Keuzerondjes:
+        <input name="stelling" type="radio" checked="" value="eens"
+        />
+        mee eens
+        <input name="stelling" type="radio" value="oneens" />
+        niet mee eens
+        <br />
+        <br />
+        Textvak
+        <textarea name="txtar" rows="3" cols="30"></textarea>
+        <br />
+        <br />
+        Uitschuifkeuzelijst:
+        <select name="ukl">
+            <option>optie 1</option>
+            <option>optie 2</option>
+            <option>optie 3</option>
+        </select>
+        Meervoudige keuzeloijst:
+        <select name="mk1" size="3" multiple="">
+            <option>mogelijkheid 1</option>
+            <option>mogelijkheid 2</option>
+            <option>mogelijkheid 3</option>
+            <option>mogelijkheid 4</option>
+            <option>mogelijkheid 5</option>
+        </select>
+        <br />
+        <br />
+        <input type="reset" value="Beginwaarden" />
+        <input onclick="alert(geenURI); return false;" type="submit" value="Verzenden" />
+    </form>
+</body>
+</html>
