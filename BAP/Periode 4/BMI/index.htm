@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bereken je BMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 id="TITEL">BEREKEN &nbsp;&nbsp;  HIER &nbsp;&nbsp;JE &nbsp;&nbsp;BMI</h1>
+<div align="center">
+<h1 id="JeGewicht">Uw gewicht.</h1>
+<br>
+<input type="text" id="gewicht" align="center">
+<br>
+<h1>Uw lengte (in cm).</h1>
+<br>
+<input type="text" id="lengte">
+<br>
+<button onclick="myfunction()" value="bereken je bmi"></button>
+<h1 id="resultaat"></h1>
+</div>
+<script>
+const gewicht1 = document.getElementById("gewicht");
+const lengte1 = document.getElementById("lengte");
+function myfunction ()
+{
+
+
+    let gewicht = gewicht1.value;
+    let lengte = lengte1.value;
+    if (gewicht != 0 && lengte != 0)
+    {
+        if (window.XMLHttpRequest)
+        {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else
+        {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        let controlScript = "BMI.php";
+        let httpString = controlScript + "?gewicht=" + gewicht + "&lengte=" + lengte;
+        let httpResponse = "";
+        xmlhttp.open("GET", httpString, true);
+        xmlhttp.send();
+        xmlhttp.onreadystatechange = function ()
+        {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+            {
+                httpResponse = xmlhttp.responseText;
+                document.getElementById('resultaat').innerHTML = httpResponse;
+            }
+
+        }
+    }
+    else
+    {
+        document.getElementById('resultaat').innerHTML = "Voer uw gegevens in A.U.B.";
+    }
+}
+
+
+</script>
+</body>
+</html>

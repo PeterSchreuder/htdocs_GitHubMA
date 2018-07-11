@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax 4</title>
+</head>
+<body style="background-color: #dddddd">
+<p><img src="http://ma-web.nl/static/vector/Logo_blok.svg" width="30"> Ajax 4 MD1 2018 </p>
+<input type="text" id="searchCountry" placeholder="zoek een land">
+<div id="txtHint">hier komt de lijst</div>
+
+<script>
+    searchCountry = document.getElementById('searchCountry');
+    searchCountry.addEventListener('keyup', function () {
+        showList(searchCountry.value,'list');
+    })
+</script>
+
+<script src="ajax.js"></script>
+
+
+</body>
+</html>

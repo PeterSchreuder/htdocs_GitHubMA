@@ -1,4 +1,5 @@
-class Pong_Ball{
+class Pong_Ball
+{
     constructor(x,y,r,speedX,speedY,color){
         this.x=x;
         this.y=y;
@@ -8,32 +9,32 @@ class Pong_Ball{
         this.color=color;
     }
 
-    loop()
-    {
-        requestAnimationFrame(loop);
-        x+=speedX;
-        y+=speedY;
-
-        if (y < r)
-        {
-            speedY = -speedY;
-        }
-        if (x > canvas.width-r)
-        {
-            speedX = -speedX;
-        }
-
-        if (y > canvas.height-r)
-        {
-            speedY = -speedY;
-        }
-        if (x < r)
-        {
-            speedX = -speedX;
-        }
-    }
-
-    loop();
+    // loop()
+    // {
+    //     requestAnimationFrame(loop);
+    //     x+=speedX;
+    //     y+=speedY;
+    //
+    //     if (y < r)
+    //     {
+    //         speedY = -speedY;
+    //     }
+    //     if (x > canvas.width-r)
+    //     {
+    //         speedX = -speedX;
+    //     }
+    //
+    //     if (y > canvas.height-r)
+    //     {
+    //         speedY = -speedY;
+    //     }
+    //     if (x < r)
+    //     {
+    //         speedX = -speedX;
+    //     }
+    // }
+    //
+    // loop();
 
     draw(context) {
         context.beginPath();

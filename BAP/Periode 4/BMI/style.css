@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Font;
+    src: url(fonts/BEBAS.ttf);
+}
+
+* {
+    padding: 1rem;
+}
+
+#TITEL {
+    font-size: 75px;
+    text-align: center;
+}
+
+#JeGewicht {
+
+}
+
+#gewicht {
+    width: 150px;
+    vertical-align: middle;
+    alignment: center;
+}
+
+#lengte {
+    width: 150px;
+}
+
+body {
+    font-family: Font;
+    display: grid;
+
+    grid-column: auto;
+    background-color: black;
+    color: white;
+}
+
+h1{
+    color: firebrick;
+}
